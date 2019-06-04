@@ -4,7 +4,8 @@ const dbService = (environment, migrate) => {
   const authenticateDB1 = () => database1.authenticate();
   const authenticateDB2 = () => database2.authenticate();
 
-  const dropDB = () => database.drop();
+  const dropDB1 = () => database1.drop();
+  const dropDB2 = () => database2.drop();
 
   const syncDB1 = () => database1.sync();
   const syncDB2 = () => database2.sync();
@@ -35,7 +36,8 @@ const dbService = (environment, migrate) => {
 
   const startMigrateFalse = async () => {
     try {
-      // await dropDB();
+      // await dropDB1();
+      // await dropDB2();
       await syncDB1();
       await syncDB2();
 

@@ -90,7 +90,7 @@ const UserController = () => {
   const getAll = async (req, res) => {
     try {
       const users = await User.findAll();
-
+ 
       return res.status(200).json({ users });
     } catch (err) {
       console.log(err);
